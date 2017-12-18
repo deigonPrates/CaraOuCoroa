@@ -1,5 +1,6 @@
 package activivity.estudo.caraoucoroa;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -23,7 +24,15 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Random  aleatorio = new Random();
                 int moeda = aleatorio.nextInt(2);
-                
+
+                Intent intent = new Intent(MainActivity.this, Resultado.class);
+                Bundle bundle = new Bundle();
+
+                bundle.putInt("lado", moeda);
+                intent.putExtras(bundle);
+
+                startActivity(intent);
+
             }
         });
     }
