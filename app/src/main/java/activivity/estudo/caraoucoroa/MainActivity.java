@@ -5,6 +5,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageButton;
 
+import java.util.Random;
+
 public class MainActivity extends AppCompatActivity {
 
     private ImageButton jogar;
@@ -19,6 +21,8 @@ public class MainActivity extends AppCompatActivity {
         jogar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Random  aleatorio = new Random();
+                int moeda = aleatorio.nextInt(2);
                 
             }
         });
